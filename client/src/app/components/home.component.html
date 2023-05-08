@@ -1,0 +1,25 @@
+<form [formGroup]="searchForm" (ngSubmit)="search()">
+    <mat-form-field appearance="fill">
+        <mat-label>Search</mat-label>
+        <input matInput placeholder="Search By Name" formControlName="name">
+        <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Suits</mat-label>
+        <mat-select formControlName="suit">
+            <mat-option value="trump">Trump</mat-option>
+            <mat-option value="wands">Wands</mat-option>
+            <mat-option value="swords">Swords</mat-option>
+            <mat-option value="pentacles">Pentacles</mat-option>
+            <mat-option value="cups">Cups</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-flat-button type="submit">Search</button>
+    <mat-error *ngIf="error">{{errorMsg}}</mat-error>
+</form>
+
+<button mat-flat-button type="button" [routerLink]="['/daily']">Daily</button>
+
+<button mat-flat-button type="button" [routerLink]="['/ppf']">Past-Present-Future</button>
+
+<button mat-flat-button type="button" [routerLink]="['/saved']">Saved Readings</button>

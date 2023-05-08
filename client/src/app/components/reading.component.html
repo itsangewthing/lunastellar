@@ -1,0 +1,16 @@
+<img [src]="dailyCard.img">
+
+<h2>{{dailyCard.name}}</h2>
+
+<p>
+    Number: {{dailyCard.number}}<br>
+    Suit: {{dailyCard.suit}}<br>
+    Fortune Telling: {{dailyCard.fortune_telling0}}<br>
+    Keywords: {{dailyCard.keywords0}}, {{dailyCard.keywords1}}, {{dailyCard.keywords2}}<br>
+    Questions To Ask: {{dailyCard.Questions_to_Ask0}}, {{dailyCard.Questions_to_Ask1}}, {{dailyCard.Questions_to_Ask2}}<br>
+</p>
+
+<button mat-flat-button type="button" [routerLink]="['/']">Home</button>
+
+<button mat-flat-button type="button" (click)="saveReading()">Save</button>
+

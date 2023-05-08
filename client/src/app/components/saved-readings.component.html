@@ -1,0 +1,20 @@
+<div *ngFor="let reading of readings">
+    
+    <div *ngFor="let card of reading.cards">
+        <img [src]="card.img">
+
+        <h2>{{card.name}}</h2>
+        
+        <p>
+            Number: {{card.number}}<br>
+            Suit: {{card.suit}}<br>
+            Fortune Telling: {{card.fortune_telling0}}<br>
+            Keywords: {{card.keywords0}}, {{card.keywords1}}, {{card.keywords2}}<br>
+            Questions To Ask: {{card.Questions_to_Ask0}}, {{card.Questions_to_Ask1}}, {{card.Questions_to_Ask2}}<br>
+        </p>
+    </div>
+    
+</div>
+
+<button mat-flat-button type="button" [routerLink]="['/']">Home</button>
+
